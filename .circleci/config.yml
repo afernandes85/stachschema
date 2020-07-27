@@ -19,3 +19,7 @@ jobs:
           name: Build application Docker image
           command: |
             docker build -f ./dotnet/Dockerfile .
+      - run:
+          name: Compose test
+          command: |
+            docker-compose -help
