@@ -18,7 +18,7 @@ jobs:
       - run:
           name: Build application Docker image
           command: |
-            docker --build -f ./dotnet/Dockerfile -t foo .
+            docker build -f ./dotnet/Dockerfile -t foo .
       - run:
           name: Compose test
           command: |
