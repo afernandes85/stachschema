@@ -18,8 +18,4 @@ jobs:
       - run:
           name: Build application Docker image
           command: |
-            docker build -f ./dotnet/Dockerfile -t foo .
-      - run:
-          name: Compose test
-          command: |
-            docker run -it foo -v "${pwd}:/local"
+           docker build -t foo -f ./dotnet/Dockerfile . && docker run -v "${pwd}:/local" -it foo
